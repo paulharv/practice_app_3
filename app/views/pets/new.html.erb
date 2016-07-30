@@ -1,0 +1,19 @@
+<div class='page-header'><h2>New Pet!</h2></div>
+<%= form_for(@pet) do |f| %>
+	<%= render partial:"shared/errors" %>
+	<div class="form-group">
+		<%= f.label :name %>
+		<%= f.text_field :name, class:'form-control' %>
+	<div>
+	<div class="form-group">
+		<%= f.label :animal %>
+		<%= f.text_field :animal, class:'form-control' %>
+	<div>
+	<div class="form-group">
+		<%= f.label :vet %>
+		<%= f.select :vet_id, options_for_select(@vets), class:'form-control' %>
+	<div>
+	<div class="form-group">
+		<%= f.submit 'Add Pet!', class:'btn btn-primary' %>
+	</div>	
+<% end %>

@@ -1,0 +1,6 @@
+navbar navbar-fixed-top navbar-inverse
+alert danger|warning|info|success
+row
+col-md-<num>
+btn btn-primary btn-danger
+form-group

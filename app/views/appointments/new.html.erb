@@ -1,0 +1,14 @@
+<h2>New Appointment with <%=@pet.vet.name%> for <%=@pet.name%> the <%=@pet.animal%></h2>
+<%= form_for(@appointment) do |f| %>
+	<%= render partial:"shared/errors" %>
+	<div class="form-group">
+		<%= f.label :when %>
+		<%= f.datetime_field :when, class:'form-control' %>
+	<div>
+	<%= f.hidden_field :vet_id %>
+	<%= f.hidden_field :pet_id %>
+	<div class="form-group">
+		<%= f.submit 'Create Appointment!', class:'btn btn-primary' %>
+	</div>	
+<% end %>
+

@@ -1,0 +1,14 @@
+<h1>Our Pets!</h1>
+<% @pets.each do |pet| %>
+	<div class="row">
+		<div class="col-md-2"><%= link_to pet.name, pet_path(pet) %> the <%= pet.animal %></div>
+		<div class="col-md-2">Cared for by <%= pet.vet.name %></div>
+		<div class="col-md-2">
+			<%= link_to "Edit #{pet.name}'s Info",  edit_pet_path(pet) %>
+		</div>
+		<div class="col-md-3">
+			<%= link_to "Delete",  pet_path(pet), method:'delete', data:{confirm:'Sure?'} %>
+		</div>
+	</div>
+<% end %>
+<div><%= link_to 'Add a Pet!', new_pet_path %></div>

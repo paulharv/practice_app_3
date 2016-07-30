@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  vet_id: 1
+  pet_id: 1
+  when: 2016-07-28 05:42:09
+
+two:
+  vet_id: 1
+  pet_id: 1
+  when: 2016-07-28 05:42:09
